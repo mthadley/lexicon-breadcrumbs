@@ -1,0 +1,26 @@
+{namespace LexiconBreadcrumbs}
+
+/**
+ * This renders an icon element based on the lexicon icon definition
+ * found at http://liferay.github.io/lexicon/content/breadcrumbs/
+ *
+ * @param? elementClasses
+ * @param items
+ */
+{template .render}
+	{let $classes kind="text"}
+		breadcrumb{$elementClasses ? ' ' + $elementClasses : ''}
+	{/let}
+
+	<ul class="{$classes}">
+		{foreach $item in $items}
+			<li {if $item.active}class="active"{/if}>
+				{if $item.href}
+					<a href="{$item.href}">{$item.label}</a>
+				{else}
+					<span>{$item.label}</span>
+				{/if}
+			</li>
+		{/foreach}
+	</ul>
+{/template}
