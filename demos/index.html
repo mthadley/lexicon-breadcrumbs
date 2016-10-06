@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Demo: Breadcrumbs</title>
+
+		<link rel="stylesheet" href="../node_modules/lexicon-ux/build/css/atlas-font-awesome.css">
+		<script src="../build/globals/breadcrumbs.js"></script>
+
+		<style>
+			body {
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Lexicon Breadcrumbs Component</h1>
+
+		<div id="demo"></div>
+
+		<script type="text/javascript">
+			new metal.LexiconBreadcrumbs({
+				items: [
+					{
+						href: '#',
+						label: 'Home'
+					},
+					{
+						href: '#',
+						label: 'Components'
+					},
+					{
+						href: '#',
+						label: 'Breadcrumbs and Paginations'
+					},
+					{
+						href: '#',
+						label: 'Page'
+					},
+					{
+						active: true,
+						label: 'Active'
+					}
+				]
+			}, '#demo');
+		</script>
+	</body>
+</html>
